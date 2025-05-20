@@ -1,0 +1,27 @@
+name: BedrockMining
+version: "1.0.0"
+main: ru.art3m4ik3.bedrockMining.BedrockMining
+api-version: "1.13"
+authors: [art3m4ik3]
+description: Minecraft Bedrock Mining Plugin
+website: https://ll-u.ru/
+
+commands:
+  bedrockmining:
+    description: Main command for BedrockMining plugin
+    aliases: [bm, bedrock]
+    usage: /<command> [reload|info|help]
+
+permissions:
+  bedrockmining.break:
+    description: Allows to break bedrock
+    default: op
+  bedrockmining.reload:
+    description: Allows to reload the plugin
+    default: op
+  bedrockmining.admin:
+    description: Gives access to all BedrockMining commands
+    default: op
+    children:
+      bedrockmining.break: true
+      bedrockmining.reload: true

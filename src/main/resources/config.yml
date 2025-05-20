@@ -1,0 +1,79 @@
+# BedrockMining Config
+# Основные настройки плагина
+
+# Язык плагина (en, ru)
+language: ru
+
+# Настройки ломания бедрока
+breaking:
+  # Время ломания бедрока в секундах
+  time: 5
+  # Инструменты, которыми можно ломать бедрок и их модификаторы скорости
+  # 1.0 - стандартная скорость ломания
+  tools:
+    DIAMOND_PICKAXE: 1.0
+    NETHERITE_PICKAXE: 1.5
+    ENCHANTED_GOLDEN_APPLE: 0.5
+  # Уровень зачарования "Эффективность", необходимый для ломания бедрока
+  min-efficiency-level: 3
+  # Показывать ли частицы при ломании
+  particles: true
+  # Выпадает ли бедрок как блок при ломании
+  drop-block: true
+  # Звуковой эффект при ломании
+  sound-effects:
+    # Включить/выключить звуковые эффекты
+    enabled: true
+    # Громкость звуков при копании (от 0.0 до 1.0)
+    breaking-volume: 0.3
+    # Громкость звука при завершении (от 0.0 до 1.0)
+    complete-volume: 1.0
+    # Начальный тон звука (от 0.5 до 2.0)
+    min-pitch: 0.5
+    # Конечный тон звука (от 0.5 до 2.0)
+    max-pitch: 1.5
+    # Частота воспроизведения звуков при копании (в процентах)
+    frequency: 10
+
+# Настройки отображения прогресса
+progress-display:
+  # Тип отображения: CHAT, ACTIONBAR, BOSSBAR, PARTICLES
+  type: ACTIONBAR
+  # Частота обновления прогресса в тиках (20 тиков = 1 секунда)
+  update-frequency: 5
+  # Цвет босс-бара (если выбран BOSSBAR)
+  bossbar-color: PURPLE
+  # Использовать ли символы для отображения прогресса в чате/actionbar
+  use-symbols: true
+  # Символы для отображения прогресса
+  progress-symbols:
+    filled: "█"
+    empty: "░"
+    length: 10
+    filled-color: "&a"
+    empty-color: "&7"
+
+# Настройки прав доступа
+permissions:
+  # Требуется ли право для ломания бедрока
+  require-permission: true
+  # Право для ломания бедрока
+  break-permission: "bedrockmining.break"
+  # Право для перезагрузки плагина
+  reload-permission: "bedrockmining.reload"
+  # Право для использования команд
+  admin-permission: "bedrockmining.admin"
+
+# Настройки команд
+commands:
+  # Главная команда плагина
+  main-command: "bedrockmining"
+  # Алиасы для главной команды
+  aliases: ["bm", "bedrock"]
+
+# Настройки совместимости версий
+compatibility:
+  # Автоматическое определение версии
+  auto-detect: true
+  # Использовать классы-адаптеры для разных версий
+  use-adapters: true
